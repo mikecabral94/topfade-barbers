@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Fade Barbers | Dublin's Premier Barbershop</title>
+    <meta
+      name="description"
+      content="Top Fade Barbers - Premium haircuts and grooming services in Dublin 1. Book your appointment today!"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-logo">TOP FADE</div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>TOP FADE BARBERS</h1>
+        <p class="hero-tagline">Premium Cuts. Sharp Style.</p>
+        <div class="hero-rating">
+          <span class="stars">★★★★★</span>
+          <span>5.0 (87 reviews)</span>
+        </div>
+        <a href="#booking" class="btn btn-primary">Book Appointment</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">✂️</div>
+          <h3>Haircut</h3>
+          <p>Classic cut with precision styling and attention to detail</p>
+          <span class="price">€15</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💈</div>
+          <h3>Skin Fade</h3>
+          <p>Sharp skin fade with seamless blending</p>
+          <span class="price">€18</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧔</div>
+          <h3>Beard Trim</h3>
+          <p>Professional beard shaping and grooming</p>
+          <span class="price">€10</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⭐</div>
+          <h3>Haircut + Beard</h3>
+          <p>Complete grooming package for the full look</p>
+          <span class="price">€22</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👦</div>
+          <h3>Kids Cut</h3>
+          <p>Haircuts for children under 12</p>
+          <span class="price">€12</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🪒</div>
+          <h3>Hot Towel Shave</h3>
+          <p>Traditional straight razor shave with hot towel</p>
+          <span class="price">€20</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <h2 class="section-title">Our Work</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/image1.JPG" alt="Haircut style 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/image2.JPG" alt="Haircut style 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/image3.JPG" alt="Haircut style 3" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+      <h2 class="section-title">Book Your Appointment</h2>
+      <div class="booking-container">
+        <form class="booking-form" id="bookingForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="John Doe"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="089 XXX XXXX"
+            />
+          </div>
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="haircut">Haircut - €15</option>
+              <option value="skinfade">Skin Fade - €18</option>
+              <option value="beard">Beard Trim - €10</option>
+              <option value="combo">Haircut + Beard - €22</option>
+              <option value="kids">Kids Cut - €12</option>
+              <option value="shave">Hot Towel Shave - €20</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="time">Preferred Time</label>
+              <select id="time" name="time" required>
+                <option value="">Select time</option>
+                <option value="09:30">09:30</option>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:30">11:30</option>
+                <option value="12:00">12:00</option>
+                <option value="12:30">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="15:00">15:00</option>
+                <option value="15:30">15:30</option>
+                <option value="16:00">16:00</option>
+                <option value="16:30">16:30</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Request Booking
+          </button>
+        </form>
+        <div class="booking-info">
+          <h3>Walk-ins Welcome!</h3>
+          <p>
+            Can't book online? No problem! Walk-ins are always welcome, or give
+            us a call:
+          </p>
+          <a href="tel:0894714686" class="phone-link">📞 089 471 4686</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+      <h2 class="section-title">Find Us</h2>
+      <div class="location-container">
+        <div class="location-info">
+          <div class="info-card">
+            <h3>📍 Address</h3>
+            <p>7A Store St, Mountjoy<br />Dublin 1, D01 H2P2</p>
+            <a
+              href="https://maps.google.com/?q=7A+Store+St,+Mountjoy,+Dublin+1,+D01+H2P2"
+              target="_blank"
+              class="directions-link"
+              >Get Directions →</a
+            >
+          </div>
+          <div class="info-card">
+            <h3>📞 Contact</h3>
+            <p><a href="tel:0894714686">089 471 4686</a></p>
+          </div>
+          <div class="info-card hours-card">
+            <h3>🕐 Opening Hours</h3>
+            <ul class="hours-list">
+              <li><span>Monday</span><span>09:30 - 19:00</span></li>
+              <li><span>Tuesday</span><span>09:30 - 19:00</span></li>
+              <li><span>Wednesday</span><span>09:30 - 19:00</span></li>
+              <li><span>Thursday</span><span>09:30 - 19:00</span></li>
+              <li><span>Friday</span><span>09:30 - 19:00</span></li>
+              <li><span>Saturday</span><span>09:30 - 19:00</span></li>
+              <li class="sunday">
+                <span>Sunday</span><span>11:00 - 18:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.5!2d-6.2558!3d53.3498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDIxJzAxLjAiTiA2wrAxNScyMS4wIlc!5e0!3m2!1sen!2sie!4v1234567890"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            title="Top Fade Barbers Location"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">TOP FADE BARBERS</div>
+        <p>Premium Cuts. Sharp Style.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+        </div>
+        <p class="copyright">© 2026 Top Fade Barbers. All rights reserved.</p>
+        <a href="#" class="admin-link" id="adminLoginBtn">Admin Dashboard</a>
+      </div>
+    </footer>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal" id="confirmModal">
+      <div class="modal-content">
+        <h3>Booking Request Sent!</h3>
+        <p>We'll confirm your appointment shortly via phone.</p>
+        <button class="btn btn-primary" onclick="closeModal()">OK</button>
+      </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal" id="adminLoginModal">
+      <div class="modal-content login-modal">
+        <h3>Admin Login</h3>
+        <p>Enter password to access the dashboard</p>
+        <form id="adminLoginForm" onsubmit="return false;">
+          <div class="form-group">
+            <input type="password" id="adminPassword" name="password" required placeholder="Enter password" autocomplete="current-password">
+          </div>
+          <p class="login-error" id="loginError">Incorrect password. Please try again.</p>
+          <button type="submit" class="btn btn-primary btn-full">Login</button>
+        </form>
+        <button class="btn-close-modal" onclick="closeLoginModal()">Cancel</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,456 @@
+/* Admin Dashboard Styles */
+
+/* Login Overlay */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.login-overlay.hidden {
+  display: none;
+}
+
+.login-container {
+  background-color: var(--bg-card);
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.login-container h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.login-form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.login-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.login-form-group input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.login-form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.login-error {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.login-error.show {
+  display: block;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+.logout-link {
+  color: #dc3545 !important;
+}
+
+.logout-link:hover {
+  opacity: 0.8;
+}
+
+/* Hide dashboard when not logged in */
+.admin-main.hidden,
+.navbar.hidden {
+  display: none;
+}
+
+.admin-badge {
+  background-color: var(--primary);
+  color: var(--bg-dark);
+  font-size: 0.6rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.admin-main {
+  padding: 100px 5% 50px;
+  min-height: 100vh;
+}
+
+.admin-header {
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+/* Stats Cards */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+.stat-number {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #fff;
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-btn.active {
+  background-color: var(--primary);
+  color: var(--bg-dark);
+  border-color: var(--primary);
+}
+
+/* Bookings Table */
+.bookings-container {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+}
+
+.bookings-table th {
+  background-color: var(--bg-light);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.bookings-table tr:last-child td {
+  border-bottom: none;
+}
+
+.bookings-table tr:hover {
+  background-color: rgba(201, 162, 39, 0.05);
+}
+
+.booking-date {
+  font-weight: 500;
+}
+
+.booking-time {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-pending {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.status-confirmed {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+}
+
+.status-cancelled {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+.btn-view {
+  background-color: #ddd;
+  color: var(--text-primary);
+}
+
+.btn-confirm {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete {
+  background-color: transparent;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #ddd;
+  color: var(--text-primary);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* No Bookings Message */
+.no-bookings {
+  display: none;
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.no-bookings.show {
+  display: block;
+}
+
+/* Modal Enhancements */
+.modal-large {
+  max-width: 500px;
+  width: 90%;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.detail-item {
+  padding: 0.75rem;
+  background-color: var(--bg-light);
+  border-radius: 4px;
+}
+
+.detail-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Message Modal */
+.message-instruction {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.message-box {
+  background-color: #f5f5f5;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  white-space: pre-line;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1da851;
+}
+
+.copy-feedback {
+  color: var(--primary);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.copy-feedback.show {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bookings-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .bookings-table th,
+  .bookings-table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .action-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions button {
+    width: 100%;
+  }
+}
